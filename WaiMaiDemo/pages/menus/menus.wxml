@@ -1,0 +1,22 @@
+<view>
+<view class="topView">
+<image src="{{businessInfo.logo}}" class="logo"></image>
+<text>{{businessInfo.name}}</text>
+</view>
+<view>
+<view>
+<block wx:for="{{types}}">
+  <view>{{item.name}}</view>
+</block>
+</view>
+<view>
+<block wx:for="{{menus}}">
+  <navigator url="../detail/detail?id={{item.id}}" hover-class="navigator-hover">
+  <image src="{{item.src}}" class="list-image"></image>
+  <view>{{item.name}}</view>
+  </navigator>
+</block>
+</view>
+</view>
+<view></view>
+</view>
